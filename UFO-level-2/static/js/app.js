@@ -1,12 +1,11 @@
 var tableData = data;
 
 
-// Creating References
 var tbody = d3.select("tbody");
 var button = d3.select("#filter-btn");
 var inputFieldDate = d3.select("#datetime");
 var inputFieldCity = d3.select("#city");
-var columns = ["date/time", "city", "state", "country", "shape", "comments"]
+var columns = ["datetime", "city", "state", "country", "shape", "comments"]
 
 var addData = (dataInput) => {
     dataInput.forEach(ufoSightings => {
@@ -52,6 +51,6 @@ button.on("click", () => {
         }
 
         else {
-            tbody.append("tr").append("td").text("No Results Found");
+            tbody.append("tr").append("td").text("No Results Found. Please Try Again.");
         }
 })
